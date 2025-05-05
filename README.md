@@ -28,3 +28,8 @@ Kulang
 •	- yung Css ko magulo check nyo na lang din
 
 •	- pati yung ibang function check nyo, salamat
+
+•	- Ano pa ba kulang o iibahin dito?
+
+username = mga pangalan natin
+password = "123"
