@@ -31,6 +31,8 @@ Kulang
 
 •	- Add kayo yung pwede i edit yung Task mismo nilagay ko lang yung pag edit ng status e
 
+•	- Yung Alert papala na naka Javascript? hiwalay nyo na lang ng file
+
 •	- Ano pa ba kulang o iibahin dito?
 
 username = mga pangalan natin
