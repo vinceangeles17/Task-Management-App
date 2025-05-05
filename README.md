@@ -29,6 +29,8 @@ Kulang
 
 •	- pati yung ibang function check nyo, salamat
 
+•	- Add kayo yung pwede i edit yung Task mismo nilagay ko lang yung pag edit ng status e
+
 •	- Ano pa ba kulang o iibahin dito?
 
 username = mga pangalan natin
