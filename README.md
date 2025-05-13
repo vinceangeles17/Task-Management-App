@@ -25,15 +25,17 @@ Added Optional nilagay ko lang pero di naman required
 
 Kulang
 
-•	- yung Css ko magulo check nyo na lang din
+•	- yung Css ko magulo check nyo na lang din  ✓ Meron na sabi nalang kayo kung off para sainyo yung color pwede ko namang baguhin 
 
-•	- pati yung ibang function check nyo, salamat
+•	- pati yung ibang function check nyo, salamat ✓ oks nadin 
 
-•	- Add kayo yung pwede i edit yung Task mismo nilagay ko lang yung pag edit ng status e
+•	- Add kayo yung pwede i edit yung Task mismo nilagay ko lang yung pag edit ng status e  ✓ oks nadin may css nadin 
 
 •	- Yung Alert papala na naka Javascript? hiwalay nyo na lang ng file
 
-•	- Ano pa ba kulang o iibahin dito?
+•	- Ano pa ba kulang o iibahin dito? vhon suggestion i think sa LogIn and register page lagay ng logo sa taas ng form tas sa index logo din sa header upper left corner
+
+
 
 username = mga pangalan natin
 

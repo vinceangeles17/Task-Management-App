@@ -43,17 +43,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
         <h1>Register</h1>
     </header>
     <main>
-        <form method="POST" action="register.php" class="task-form">
-            <input type="text" name="reg_username" placeholder="Username" required>
-            <input type="password" name="reg_password" placeholder="Password" required>
-            <button type="submit" name="register" class="add-task-btn">Register</button>
-        </form>
-
+        <div class="form-container">
+            <form method="POST" action="register.php" class="task-form">
+                <input type="text" name="reg_username" placeholder="Username" required>
+                <input type="password" name="reg_password" placeholder="Password" required>
+                <button type="submit" name="register" class="add-task-btn">Register</button>
+            </form>
+            <p>Already have an account? <a href="login.php">Login here</a></p>
+        </div>
         <?php if (!empty($error_message)): ?>
             <div class="error-message"><?php echo $error_message; ?></div>
         <?php endif; ?>
 
-        <p>Already have an account? <a href="login.php">Login here</a></p>
+        
     </main>
 </body>
 </html>
