@@ -79,12 +79,17 @@ $result = $conn->query($query);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Scheduler</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="notifications.js"></script>
 </head>
 <body>
     <header>
-        <h1>Welcome, <?php echo $_SESSION['username']; ?></h1>
+        <div class="header-left-container">
+            <div class="header-left-title">Your Personalized Task Manager</div>
+            <h1 class="welcome-header">Welcome, <?php echo $_SESSION['username']; ?></h1>
+        </div>
     </header>
     <main class="Index">
         <div class="index-container">
@@ -159,7 +164,7 @@ $result = $conn->query($query);
                                         <input type="hidden" name="task_id" value="<?php echo $task['id']; ?>">
                                         <button type="submit" name="edit_status">Edit Status</button>
                                         <button type="submit" name="edit_task">Edit Task</button>
-                                        <button type="submit" name="delete_task">Delete</button>
+                                        <button type="submit" name="delete_task" onclick="return confirmDelete();">Delete</button>
                                     </form>
                                 <?php endif; ?>
                             </p>
@@ -173,6 +178,24 @@ $result = $conn->query($query);
             </form>
         </div>
     </main>
+<script>
+<?php
+if (isset($_POST['add_task'])) {
+    echo "notifyAddTask();";
+} elseif (isset($_POST['update_status'])) {
+    echo "notifyChangeStatus();";
+} elseif (isset($_POST['edit_task_submit'])) {
+    echo "notifyEditTask();";
+} elseif (isset($_POST['delete_task'])) {
+    echo "notifyDeleteTask();";
+}
+?>
+</script>
+<script>
+function confirmDelete() {
+    return confirm("Are you sure you want to delete this task?");
+}
+</script>
 </body>
 </html>
 

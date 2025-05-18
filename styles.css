@@ -16,13 +16,38 @@ html {
 header {
     background: linear-gradient(135deg, #1f2d3d 0%, #3b4d6b 100%);
     color: #ffffff;
-    text-align: center;
     padding: 1.5rem 0;
     font-size: 1.8rem;
     font-weight: 600;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header-left-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header-left-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #00c6fb;
+    user-select: none;
+    margin-bottom: 0.2rem;
+}
+
+.welcome-header {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
 }
 
 header::after {
@@ -268,6 +293,7 @@ h3 {
     background-color: #dc2626;
 }
 
+/* Edit Task Form */
 .edit-task-form {
     width: 1000px;
     display: flex;
@@ -300,23 +326,20 @@ h3 {
     box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.15);
 }
 
-.edit-task-form button {
-    align-self: flex-start;
-    background: linear-gradient(135deg, #0077cc 0%, #00c6fb 100%);
+/* Additional styles for fixed top header */
+.fixed-top-header {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    z-index: 1000;
+    background-color: transparent;
     color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
+    font-size: 2.2rem;
     font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    pointer-events: none;
 }
-
-.edit-task-form button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 119, 204, 0.2);
-}
-
 
 /* Filter Form */
 .filter-form {
@@ -411,6 +434,65 @@ a:hover {
     .task button {
         margin: 0.25rem 0;
         width: 100%;
+    }
+    
+    .auth-header-container {
+        gap: 0.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1.4rem;
+        padding: 1rem 0;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .task-form input,
+    .task-form select,
+    .task-form button,
+    .filter-form input,
+    .filter-form select,
+    .filter-form button {
+        padding: 12px 14px;
+        font-size: 0.9rem;
+    }
+
+    .add-task-btn {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .task {
+        padding: 0.75rem 1rem;
+    }
+
+    .task p {
+        font-size: 0.9rem;
+    }
+
+    .edit-task-form {
+        width: 100%;
+        padding: 0.75rem;
+    }
+
+    .edit-task-form input,
+    .edit-task-form select {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    .edit-task-form button {
+        padding: 10px 16px;
+        font-size: 0.9rem;
     }
 }
 
