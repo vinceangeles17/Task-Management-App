@@ -1,5 +1,5 @@
 Changelog:
 
--Added new alert and confirmation feature for buttons
--Added mobile device responsiveness to Login, Register, and Home pages
--Small QoL changes 
+*Added new Alert and Confirmation features for buttons
+*Added mobile device responsiveness for all pages
+*Small QoL changes
