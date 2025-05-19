@@ -35,12 +35,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
     <header>
-        <h1>Login</h1>
+        <div class="auth-header-container">
+            <div class="header-left-title">Your Personalized Task Manager</div>
+        </div>
+        <h1 class="page-header fixed-top-header">Login</h1>
     </header>
     <main>
         <div class="form-container">
