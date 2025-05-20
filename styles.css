@@ -59,6 +59,9 @@ header::after {
     background: linear-gradient(90deg, #0077cc 0%, #00c6fb 100%);
 }
 
+.gap {
+    padding: 2rem;
+}
 /* Main Container */
 main {
     display: flex;
