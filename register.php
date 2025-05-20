@@ -44,6 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
 </head>
 <body>
     <header>
+        <img src="TASKMANAGERLOGO.png" alt="Logo" class="logo" style="max-width:100%;height:auto;">
         <div class="auth-header-container">
             <div class="header-left-title">Your Personalized Task Manager</div>
         </div>

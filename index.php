@@ -86,6 +86,7 @@ $result = $conn->query($query);
 </head>
 <body>
     <header>
+        <img src="TASKMANAGERLOGO.png" alt="Logo" class="logo" style="max-width:100%;height:auto;">
         <div class="header-left-container">
             <div class="header-left-title">Your Personalized Task Manager</div>
             <h1 class="welcome-header">Welcome, <?php echo $_SESSION['username']; ?></h1>
