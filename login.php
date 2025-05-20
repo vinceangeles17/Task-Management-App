@@ -45,6 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
             <div class="header-left-title">Your Personalized Task Manager</div>
         </div>
     </header>
+   <div class="gap"></div>
     <main>
         <div class="form-container">
            <h1>Login</h1>
