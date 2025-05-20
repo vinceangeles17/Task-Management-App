@@ -1,3 +1,3 @@
-Hosted on infinitefree 
+Hosted on infinityfree 
 
 https://angeles.ct.ws/
