@@ -7,7 +7,6 @@ body {
     line-height: 1.6;
 }
 
-/* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
 }
@@ -326,19 +325,25 @@ h3 {
     box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.15);
 }
 
-/* Additional styles for fixed top header */
-.fixed-top-header {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-    z-index: 1000;
-    background-color: transparent;
-    color: white;
-    font-size: 2.2rem;
-    font-weight: 600;
-    pointer-events: none;
+.edit-status-container {
+    display: flex;
+    justify-content: flex-end;
+}
+.edit-status-container select {
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 1rem;
+    border: 1px solid #cbd5e1;
+    background: white;
+    color: #1e293b;
+    transition: all 0.2s ease;
+    margin-right: 10px;
+}
+
+.edit-status-container select:focus {
+    border-color: #0077cc;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.15);
 }
 
 /* Filter Form */

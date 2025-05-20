@@ -22,10 +22,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
             header("Location: index.php");
             exit();
         } else {
-            echo "Invalid password.";
+            $error_message = "Invalid Password";
         }
     } else {
-        echo "No user found.";
+        $error_message = "No user found";;
     }
     $stmt->close();
 }
@@ -44,10 +44,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
         <div class="auth-header-container">
             <div class="header-left-title">Your Personalized Task Manager</div>
         </div>
-        <h1 class="page-header fixed-top-header">Login</h1>
     </header>
     <main>
         <div class="form-container">
+           <h1>Login</h1>
             <form method="POST" action="login.php" class="task-form">
                 <input type="text" name="username" placeholder="Username" required>
                 <input type="password" name="password" placeholder="Password" required>
@@ -55,7 +55,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
             </form>
             <p>Don't have an account? <a href="register.php">Register here</a></p>
         </div>
-        
+        <?php if (!empty($error_message)): ?>
+            <div class="error-message"><?php echo $error_message; ?></div>
+        <?php endif; ?>
     </main>
 </body>
 </html>

@@ -90,6 +90,11 @@ $result = $conn->query($query);
             <div class="header-left-title">Your Personalized Task Manager</div>
             <h1 class="welcome-header">Welcome, <?php echo $_SESSION['username']; ?></h1>
         </div>
+        </div>
+            <form method="POST" action="index.php" class="task-form">
+                <button type="submit" name="logout" class="add-task-btn">Logout</button>
+            </form>
+        </div>
     </header>
     <main class="Index">
         <div class="index-container">
@@ -149,9 +154,9 @@ $result = $conn->query($query);
                             <p><?php echo $task['task_name']; ?> - Priority: <?php echo $task['priority']; ?> - Due: <?php echo $task['due_date']; ?></p>
                             <p>Status: 
                                 <?php if (isset($_POST['edit_status']) && $_POST['task_id'] == $task['id']): ?>
-                                    <form method="POST" action="index.php" style="display:inline;">
+                                    <form method="POST" action="index.php" style="display:inline-block;" class="edit-status-container">
                                         <input type="hidden" name="task_id" value="<?php echo $task['id']; ?>">
-                                        <select name="status">
+                                        <select name="status" >
                                             <option value="To Do" <?php if ($task['status'] == 'To Do') echo 'selected'; ?>>To Do</option>
                                             <option value="In Progress" <?php if ($task['status'] == 'In Progress') echo 'selected'; ?>>In Progress</option>
                                             <option value="Done" <?php if ($task['status'] == 'Done') echo 'selected'; ?>>Done</option>
@@ -171,12 +176,6 @@ $result = $conn->query($query);
                         <?php endif; ?>
                     </div>
                 <?php endwhile; ?>
-            </div>
-
-            <form method="POST" action="index.php" class="task-form">
-                <button type="submit" name="logout" class="add-task-btn">Logout</button>
-            </form>
-        </div>
     </main>
 <script>
 <?php
